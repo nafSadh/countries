@@ -1,0 +1,56 @@
+<html ng-app="ns7CountriesApp">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Countries of the world</title>
+  <!-- Optional theme -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <!-- angular js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
+  <script>
+    var ns7CountriesApp = angular.module('ns7CountriesApp', ['ngSanitize']);
+
+    ns7CountriesApp.controller('ns7CountriesCtrl', function ($scope, $http, $location) {
+      $scope.location = $location;
+      $scope.$watch('location.search()', function () {
+        $scope.psstEmail = ($location.search()).psstEmail;
+      }, true);
+      $http.get('countries.json')
+          .then(function (r) {
+            $scope._ = r.data;
+          });
+      
+      $scope.mlt = function mlt(text) {
+        if (angular.isArray(text)) {
+          var t = '';
+          for (var i = 0; i < text.length; i++) {
+            t += text[i]
+          }
+          return t
+        } else {
+          return text
+        }
+      };
+    })
+  </script>
+</head>
+<body>
+<div ng-controller="ns7CountriesCtrl" class="ns7Countries container">
+  <div class="row">
+    <table>
+      <tr>
+        <th>Country</th>
+        <th>Capital</th>
+      </tr>
+      <tr ng-repeat="country in _.countries">
+        <td>{{country.name}}</td>
+        <td>{{country.capital}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<script>
+</script>
+</body>
+</html>

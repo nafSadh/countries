@@ -1,0 +1,11 @@
+{
+  "countries": [
+    {
+      "name": "Bangladesh",
+      "capital": "Dhaka"
+    }, {
+      "name": "United States of America",
+      "capital": "Washington, D.C."
+    }
+  ]
+}
