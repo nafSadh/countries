@@ -2,10 +2,26 @@
   "countries": [
     {
       "name": "Bangladesh",
-      "capital": "Dhaka"
+      "capital": "Dhaka",
+      "flag":"https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg",
+      "thumb":"https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg"
+    },{
+      "name": "Japan",
+      "capital": "Tokyo",
+      "flag":"https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
+      "thumb":"https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg"
     }, {
       "name": "United States of America",
-      "capital": "Washington, D.C."
+      "capital": "Washington, D.C.",
+      "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png",
+      "thumb":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png"
+    }, {
+      "name":"Afghanistan",
+      "official_name":"Islamic Republic of Afghanistan",
+      "capital":"Kabul",
+      "flag":"https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Afghanistan.svg",
+      "thumb":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Afghanistan.svg/200px-Flag_of_Afghanistan.svg.png",
+      "UN":"member"
     }
   ]
 }

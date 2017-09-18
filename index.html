@@ -40,10 +40,12 @@
   <div class="row">
     <table>
       <tr>
+        <th>Flag</th>
         <th>Country</th>
         <th>Capital</th>
       </tr>
       <tr ng-repeat="country in _.countries">
+        <td><img ng-src="{{country.thumb}}" width="36px"></td>
         <td>{{country.name}}</td>
         <td>{{country.capital}}</td>
       </tr>
